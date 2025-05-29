@@ -1,2 +1,4 @@
-/input_images
-/main.py
+service_account.json
+__pycache__/
+*.pyc
+.env

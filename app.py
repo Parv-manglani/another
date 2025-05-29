@@ -6,7 +6,7 @@ import json
 import re
 
 # Set up Google Cloud credentials
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "service_account.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
 
 # Initialize Vertex AI
 aiplatform.init(project="i-gateway-461222-p6", location="us-central1")
