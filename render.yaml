@@ -1,0 +1,14 @@
+
+services:
+  - type: web
+    name: marksheet-api
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "./start.sh"
+    envVars:
+      - key: GOOGLE_APPLICATION_CREDENTIALS
+        value: /etc/secrets/gcp-creds.json
+    secretFiles:
+      - path: /etc/secrets/gcp-creds.json
+        envVarKey: GOOGLE_APPLICATION_CREDENTIALS
